@@ -41,14 +41,13 @@ for x in range(6):
             pool.append(14)
             points -= 7
             print("Last stat:",14)
-        elif points > 5:
-            pool.append(7 + points)
-            print("Last stat:",7 + points)
-            points = 1
-        else:
+        elif points < 5:
             pool.append(8 + points)
             print("Last stat:",8 + points)
             points = 0
+        else:
+            pool.append(8)
+            print("Last stat:",8)
     else:
 
         rand_stat = random.choice(stats)

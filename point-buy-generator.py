@@ -30,13 +30,12 @@ def get_pools(num):
                 pool.append(14)
                 points -= 7
 
-            elif points > 5:
-                pool.append(7 + points)
-                points = 1
-
-            else:
+            elif points < 5:
                 pool.append(8 + points)
                 points = 0
+
+            else:
+                pool.append(8)
 
         else:
             rand_stat = random.choice(stats)
